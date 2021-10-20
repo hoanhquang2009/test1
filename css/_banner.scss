@@ -1,0 +1,112 @@
+.banner{
+    display: flex;
+    align-items: center;
+    margin-bottom: 103px;
+}
+.baner-left{
+    width: 555px;
+}
+.baner-left .title-1{
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 70px;
+    margin-bottom: 20px;
+}
+.baner-left .title-1 span{
+    font-weight: 700;
+}
+.baner-left .title-2{
+    font-weight: 400;
+    font-size: 16px;
+    color: $gray-dark;
+    margin-bottom: 50px;
+    line-height: 30px;
+   
+}
+.baner-left .title-2 span{
+    font-weight: 500;
+}
+.baner-left .button{
+    width: 250px;
+    height: 60px;
+    background: $orange_white;
+    color: $white;
+    border-radius: 10px;
+    border:none;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    z-index: 99;
+    
+
+}
+.baner-left .button::after{
+    content: '';
+    width: 211.83px;
+    height: 60px;
+    position: absolute;
+    background: rgba(245, 56, 56, 0.35);
+    border-radius: 10px;
+    filter: blur(30px);
+    left: 16.09px;
+
+}
+.banner-right{
+    width: 611.24px;
+    height: 382.44px;
+    transform: translateX(80px);
+}
+.banner-right .baner-img{
+    width: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 549px){
+    .banner{
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin-bottom: 103px;
+        & .baner-left{
+            width: 100%;
+            & .title-1{
+                font-weight: 500;
+                font-size: 40px;
+                line-height: 50px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            & .title-2{
+                font-weight: 400;
+                font-size: 14px;
+                color: $gray-dark;
+                margin-bottom: 50px;
+                line-height: 30px;
+                text-align: center;
+            }
+            & .button{
+                width: 120px;
+                height: 40px;
+                margin-bottom: 20px;
+                background: $orange_white;
+                color: $white;
+                border-radius: 10px;
+                border:none;
+                font-weight: bold;
+                font-size: 16px;
+                position: relative;
+                z-index: 99;
+                &::after{
+                    display: none;
+                }
+            
+            }
+        }
+        & .banner-right{
+            width: 100%;
+            height: 300px;
+            transform: none;
+        
+        }
+    }
+}

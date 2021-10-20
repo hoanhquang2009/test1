@@ -1,0 +1,182 @@
+.vote {
+    margin-bottom: 70px;
+    & .vote-title {
+        text-align: center;
+        margin-bottom: 60px;
+        & h2 {
+            font-weight: 500;
+            font-size: 35px;
+            width: 448px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        & p {
+            font-weight: 400;
+            font-size: 16px;
+            color: $gray-dark;
+            width: 555px;
+            margin: 0 auto;
+        }
+    }
+    & .item-card {
+        & .card-vote {
+            width: 350px;
+            height: 250px;
+            border: 2px solid #dddddd;
+            border-radius: 10px;
+            padding: 25px;
+            & .card-info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 15px;
+                & .card-item {
+                    display: flex;
+                    gap: 0 20px;
+                    align-items: center;
+                    & .card-img {
+                        width: 50px;
+                        height: 50px;
+                        & img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    & .card-name {
+                        & .name {
+                            font-weight: 500;
+                            font-size: 18px;
+                            margin-bottom: 5px;
+                        }
+                        & .from {
+                            font-weight: 400;
+                            font-size: 14px;
+                            color: $gray-dark;
+                        }
+                    }
+                }
+                & .card-start {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            & .card-content {
+                font-weight: 400px;
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+        &.owl-carousel .owl-dots {
+            position: absolute;
+            display: block;
+            left: 0;
+            margin-top: 50px;
+            & .owl-dot {
+                & span {
+                    width: 15px;
+                    height: 15px;
+                    margin: 5px 7px;
+                    background: #d6d6d6;
+                    display: block;
+                    transition: opacity 0.2s ease;
+                    border-radius: 30px;
+                }
+                &.active span {
+                    width: 45px;
+                    height: 15px;
+                    background: $orange;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+        &.owl-carousel .owl-nav {
+            position: absolute;
+            right: 0;
+            transform: translateX(-100px);
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+
+            & .owl-prev {
+                height: 60px;
+                width: 60px;
+                color: $orange;
+                border: 3px solid;
+                border-radius: 50%;
+                margin-right: 30px;
+                font-size: 30px;
+                text-indent: 999%;
+                position: relative;
+                &::before {
+                    content: url(./../images/Button/nonact/eva_arrow-back-fill.png);
+                    font-weight: 700;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 20px;
+                    background: transparent;
+                    text-indent: 0;
+                    position: absolute;
+                    left: 0;
+                    margin-left: 15px;
+                    margin-top: 2px;
+                }
+            }
+            & .owl-next {
+                height: 60px;
+                width: 60px;
+                color: $orange_white;
+                border: 3px solid;
+                border-radius: 50%;
+                background: $orange_white;
+                color: #fff;
+                font-size: 30px;
+                text-indent: 999%;
+                position: relative;
+                &::after {
+                    content: url(./../images/Button/act/eva_arrow-back-fill.png);
+                    font-weight: 700;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 20px;
+                    background: transparent;
+                    text-indent: 0;
+                    position: absolute;
+                    left: 0;
+                    margin-left: 10px;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 549px){
+    .vote{
+        width: 100%;
+        & .vote-title {
+            width: 100%;
+            text-align: center;
+            & h2{
+                width: 100%;
+                font-size: 30px;
+                
+            }
+            & p {
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+        & .item-card {
+            width: 100%;
+            & .card-vote{
+                width: 100%;
+            }
+            &.owl-carousel .owl-nav{
+                display: none;
+            }
+            &.owl-carousel .owl-dots{
+                margin-top: 20px;
+            }
+        }
+    }
+}

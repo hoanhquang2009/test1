@@ -1,0 +1,173 @@
+.plan{
+    margin-bottom: 200px;
+    & .title-plan{
+       text-align: center;
+       margin-bottom: 60px;
+       & h3{
+           font-weight: 500;
+           font-size: 35px;
+           line-height: 50px;
+           margin-bottom: 20px;
+       }
+       & p{
+           font-weight: 400;
+           font-size: 16px;
+           line-height: 30px;
+           width: 555px;
+           margin: 0 auto;
+           color: $gray-dark;
+       }
+    }
+    & .plan-package{
+       display: flex;
+       align-items: center;
+       justify-content: space-evenly;
+        & .item:nth-child(2){
+            & .item-content{
+                margin-bottom: 80px;
+            }
+            & .price-plan {
+                & span{
+                    color: $gray-dark;
+                    font-weight: 400;
+                }
+            }
+        }
+        & .item.active{
+            border:2px solid $orange;
+        }
+        & .item:nth-child(3){
+            & .item-content{
+                margin-bottom: 40px;
+            }
+            & .price-plan {
+                & span{
+                    color: $gray-dark;
+                    font-weight: 400;
+                }
+            }
+            & .button-plan{
+                width: 177.88px;
+                height: 45px;
+                border-radius: 50px;
+                color:#fff;
+                border:3px solid $orange_white;
+                background:  $orange_white;
+                font-weight: 700;
+                font-size: 16px;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            }
+            & .button-plan::after{
+                content: '';
+                width: 127.38px;
+                height: 45px;
+                position: absolute;
+                background: rgba(245, 56, 56, 0.35);
+                border-radius: 10px;
+                filter: blur(20px);
+                left: 16.09px;
+            }
+        }
+        & .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 330px;
+            height: 760px;
+            background-color: #fff;
+            border-radius: 10px;
+            border:2px solid #DDDDDD;
+            & .item-img{
+                width: 144.9px;
+                height: 165.37px;
+                margin-bottom: 30px;
+                & img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            & .item-title{
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 30px;
+                color:$black;
+                margin-bottom: 30px;
+            }
+            & .item-content{
+                list-style: none;
+                margin-bottom: 120px;
+                & .item-content-li{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    & .logo{
+                        margin-right: 20px;
+                    }
+                    & p{
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: $gray-dark;
+                    }
+                }
+            }
+            & .price-plan {
+                margin-bottom: 20px;
+                & h3{
+                font-weight: 500;
+                font-size: 25px;
+                color: $black;
+                }
+            }
+            & .button-plan{
+                width: 177.88px;
+                height: 45px;
+                border-radius: 50px;
+                color:$orange_white;
+                border:3px solid $orange_white;
+                background: #fff;
+                font-weight: 700;
+                font-size: 16px;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            }
+        }
+        
+    }
+}
+@media screen and (max-width: 549px){
+    .plan{
+        width: 100%;
+        margin-bottom: 50px;
+        & .title-plan{
+            text-align: center;
+            margin-bottom: 60px;
+            & h3{
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 50px;
+                margin-bottom: 20px;
+            }
+            & p{
+                width: 100%;
+                text-align: center;
+                font-weight: 400;
+                font-size: 14px;
+                margin: 0 auto;
+                color: $gray-dark;
+            }
+         }
+         & .plan-package{
+           display: grid;
+           grid-auto-columns: 300px;
+           grid-template-columns: repeat(3,1fr);
+           justify-content: flex-start;
+           overflow: auto;
+           scroll-snap-type: x mandatory;
+           scroll-snap-stop: always;
+           
+             & .item{
+                 margin-right: 30px;
+             }
+         }
+    }
+}
